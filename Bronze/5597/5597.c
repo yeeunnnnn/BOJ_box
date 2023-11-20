@@ -2,18 +2,20 @@
 
 int main () {
     int arr[31], a;
-    int f[31];
 
     for (int i=1; i<=30; i++) {
         arr[i]=i;
     }
-    scanf("%d", &a);
     for (int j=1; j<=30; j++) {
-        if (arr[j]!=a) {
-
+        scanf("%d", &a);
+        if (arr[j]==a) {
+            arr[j] = 0;
                 }
     }
-    printf("%s", f);
-
+    for (int k=1; k<=30; k++) {
+        if (arr[k]!=0) {
+            printf("%d",arr[k]);
+        }
+    }
     return 0;
 }
